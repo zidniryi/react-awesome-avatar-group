@@ -2,25 +2,30 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import AvatarGroup from './AvatarGroup';
 
-describe('AvatarGroup component', () => {
+describe('AvatarGroup', () => {
+    const names = [
+        { name: 'John Doe', image: 'https://www.w3schools.com/html/pic_trulli.jpg' },
+        { name: 'Jane Smith', image: '' },
+        { name: 'Mike Johnson', image: 'https://www.w3schools.com/html/img_chania.jpg' },
+        { name: 'Sarah Lee', image: 'https://www.w3schools.com/html/img_girl.jpg' },
+        { name: 'Tom Davis', image: '' },
+        { name: 'Emily White', image: 'https://www.w3schools.com/html/img_lights.jpg' },
+    ];
+
     it('should render properly with default props', () => {
-        const { container } = render(<AvatarGroup names={['Alice', 'Bob', 'Charlie']} />);
+        const { container } = render(<AvatarGroup names={names} />);
         expect(container.firstChild).toMatchSnapshot();
     });
 
-    it('should render the correct number of avatars with the maxLength prop', () => {
-        const { container } = render(<AvatarGroup maxLength={2} names={['Alice', 'Bob', 'Charlie']} />);
-        expect(container.firstChild).toMatchSnapshot();
+    it('should render avatars with correct size', () => {
+        const { getAllByTestId } = render(<AvatarGroup names={names} size="sm" />);
+        const avatars = getAllByTestId('avatar-initial-text');
+        expect(avatars[0]).toHaveStyle({ width: '32px', height: '32px', fontSize: '16px' });
     });
 
-    it('should render avatars with the correct size with the size prop', () => {
-        const { container } = render(<AvatarGroup size="sm" names={['Alice', 'Bob', 'Charlie']} />);
-        expect(container.firstChild).toMatchSnapshot();
-    });
-
-    it('should render avatars with the correct initials', () => {
-        const { getByText } = render(<AvatarGroup names={['Alice Bob', 'Bob Marley', 'Charlie Puth']} />);
-        expect(getByText('AB')).toBeInTheDocument();
-        expect(getByText('CP')).toBeInTheDocument();
+    it('should render avatars with remaining count', () => {
+        const { getByTestId } = render(<AvatarGroup names={names} maxLength={2} />);
+        const remainingAvatar = getByTestId('avatar-initial-item');
+        expect(remainingAvatar).toHaveTextContent('+4');
     });
 });

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App matches AvatarGroup snapshot 1`] = `
+<div>
+  <div>
+    <div
+      data-testid="avatar-initial"
+      style="display: inline-block;"
+    >
+      <div
+        data-testid="avatar-initial-text"
+        style="margin-right: -15px; border: 3px solid white; margin-left: 8%; display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgb(230, 234, 244); color: transparent; font-size: 20px; background-image: url(https://www.w3schools.com/html/pic_trulli.jpg); background-size: contain; background-repeat: no-repeat;"
+      >
+        JD
+      </div>
+    </div>
+    <div
+      data-testid="avatar-initial"
+      style="display: inline-block;"
+    >
+      <div
+        data-testid="avatar-initial-text"
+        style="margin-right: -15px; border: 3px solid white; margin-left: 8%; display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgb(230, 234, 244); color: rgb(118, 123, 135); font-size: 20px;"
+      >
+        JS
+      </div>
+    </div>
+    <div
+      data-testid="avatar-initial"
+      style="display: inline-block;"
+    >
+      <div
+        data-testid="avatar-initial-text"
+        style="margin-right: -15px; border: 3px solid white; margin-left: 8%; display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgb(230, 234, 244); color: transparent; font-size: 20px; background-image: url(https://www.w3schools.com/html/img_chania.jpg); background-size: contain; background-repeat: no-repeat;"
+      >
+        MJ
+      </div>
+    </div>
+    <div
+      data-testid="avatar-initial-text"
+      style="display: inline-block;"
+    >
+      <div
+        data-testid="avatar-initial-item"
+        style="margin-right: -15px; border: 3px solid white; display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgb(230, 234, 244); color: rgb(118, 123, 135); font-size: 20px;"
+      >
+        +
+        3
+      </div>
+    </div>
+  </div>
+</div>
+`;
