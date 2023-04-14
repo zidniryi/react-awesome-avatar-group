@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Example Component</h1>
+      <h1 id="Text">Example Component</h1>
       <AvatarGroup maxLength={3} size="sm" names={names} />
     </div>
   );

@@ -19,8 +19,8 @@ describe('AvatarGroup component', () => {
     });
 
     it('should render avatars with the correct initials', () => {
-        const { getByText } = render(<AvatarGroup names={['Alice', 'Bob', 'Charlie']} />);
+        const { getByText } = render(<AvatarGroup names={['Alice Bob', 'Bob Marley', 'Charlie Puth']} />);
         expect(getByText('AB')).toBeInTheDocument();
-        expect(getByText('CH')).toBeInTheDocument();
+        expect(getByText('CP')).toBeInTheDocument();
     });
 });
