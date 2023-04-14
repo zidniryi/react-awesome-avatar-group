@@ -15,14 +15,15 @@ const AvatarGroup = ({ maxLength = 3, size = 'md', names }) => {
                 <div key={`avatar-${index}`} style={{ display: 'inline-block' }}>
                     <div
                         style={{
+                            marginLeft: "8%",
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
                             width: size === 'xs' ? '24px' : size === 'sm' ? '32px' : size === 'md' ? '40px' : '48px',
                             height: size === 'xs' ? '24px' : size === 'sm' ? '32px' : size === 'md' ? '40px' : '48px',
                             borderRadius: '50%',
-                            backgroundColor: '#ccc',
-                            color: '#fff',
+                            backgroundColor: '#E6EAF4',
+                            color: '#767B87',
                             fontSize: size === 'xs' ? '12px' : size === 'sm' ? '16px' : size === 'md' ? '20px' : '24px',
                         }}
                     >
@@ -43,8 +44,8 @@ const AvatarGroup = ({ maxLength = 3, size = 'md', names }) => {
                             width: size === 'xs' ? '24px' : size === 'sm' ? '32px' : size === 'md' ? '40px' : '48px',
                             height: size === 'xs' ? '24px' : size === 'sm' ? '32px' : size === 'md' ? '40px' : '48px',
                             borderRadius: '50%',
-                            backgroundColor: '#ccc',
-                            color: '#fff',
+                            backgroundColor: '#E6EAF4',
+                            color: '#767B87',
                             fontSize: size === 'xs' ? '12px' : size === 'sm' ? '16px' : size === 'md' ? '20px' : '24px',
                         }}
                     >
