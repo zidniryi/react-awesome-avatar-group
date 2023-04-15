@@ -1,5 +1,12 @@
 import React from 'react';
 
+/**
+ * AvatarGroup component
+ * 
+ * @number {maxLength} - Max Length  for avatar
+ * @string {size} - size of avatar xs | sm | md | lg
+ * @returns {JSX.Element}
+ */
 const AvatarGroup = ({ maxLength = 3, size = 'md', names }) => {
     const getInitials = (name) => {
         const words = name.split(' ');

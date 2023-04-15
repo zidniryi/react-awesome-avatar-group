@@ -1,70 +1,83 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-awesome-avatar-group
+react-awesome-avatar-group is a library for text that is small and easy to customize
 
-## Available Scripts
+## Run this project
+- npm i
+- npm run start
 
-In the project directory, you can run:
+## Run this test
+- npm run test
 
-### `npm start`
+## Run this coverage
+- npm run test:coverage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Run this storybook (use node 16+)
+- npm run storybook 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
+- small size
+- easy to use
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
+You can use npm
 
-### `npm run build`
+```
+npm i react-awesome-avatargroup
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+or via Yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```js
+yarn add react-awesome-avatargroup
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+or directly import from component
+import AvatarGroup from "./components/AvatarGroup";
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
+    
+Here's a sample implementation 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```javascript
+import React from "react";
+import AvatarGroup from "./components/AvatarGroup";
+// or via npm cause I alredy publish it
+// import AvatarGroup from "react-awesome-avatargroup";
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+const App = () => {
+  const names = [
+    { name: 'John Doe', image: '' },
+    { name: 'Jane Smith', image: 'https://64.media.tumblr.com/8cfaa4489602dd7eea5c7f9b82b444e1/d4c665ae64812e87-cd/s250x400/6ebec970fb11a33e2597a4ee0fe8698026fc3a24.png' },
+    { name: 'Mike Johnson', image: 'https://www.w3schools.com/html/img_chania.jpg' },
+    { name: 'Sarah Lee', image: 'https://www.w3schools.com/html/img_girl.jpg' },
+    { name: 'Tom Davis', image: '' },
+    { name: 'Emily White', image: 'https://www.w3schools.com/html/img_lights.jpg' },
+  ];
 
-## Learn More
+  return (
+    <div>
+      <AvatarGroup size="lg" maxLength={3} names={names} />
+    </div>
+  );
+};
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+export default App;
+ ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Result
+![enter image description here](https://i.ibb.co/ygdjgTh/Screen-Shot-2023-04-15-at-17-04-33.png)
 
-### Code Splitting
+## Options
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Option | Type | Default | Description
+--- | --- | --- | ---
+|[`names`](#names) | `Array Object` | `[]` | An array of names contain name and image.|
+|[`size`](#size) | `string` | `md` | Size of avattar
+|[`maxLength`](#maxLength) | `number` | `3` | Max length of the avatar displayed
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
