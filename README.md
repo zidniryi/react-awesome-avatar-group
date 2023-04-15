@@ -1,6 +1,6 @@
 
 # react-awesome-avatar-group
-react-awesome-avatar-group is a library for text that is small and easy to customize
+react-awesome-avatar-group is a library for showing avatar group image or text as avatar
 
 ## Run this project
 - npm i
