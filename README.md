@@ -12,7 +12,7 @@ react-awesome-avatar-group is a library for showing avatar group image or text a
 ## Run this coverage
 - npm run test:coverage
 
-## Run this storybook (use node 16+)
+## Run this storybook (use node 16+) recomended v16.18.0 (npm v8.19.2)
 - npm run storybook 
 
 ## Features
