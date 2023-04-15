@@ -46,7 +46,7 @@ Here's a sample implementation
 import React from "react";
 import AvatarGroup from "./components/AvatarGroup";
 // or via npm cause I alredy publish it
-// import AvatarGroup from "react-awesome-avatargroup";
+// import { AvatarGroup } from "react-awesome-avatar-group";
 
 const App = () => {
   const names = [
