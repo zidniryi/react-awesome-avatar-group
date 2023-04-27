@@ -10,7 +10,14 @@ import React from 'react';
 const AvatarGroup = ({ maxLength = 3, size = 'md', names }) => {
     const getInitials = (name) => {
         const words = name.split(' ');
+        if (words.length > 2) {
+            const haveMiddleName = words.map((word) => word.charAt(0).toUpperCase()).join('').substring(0, 4);
+            const resultInitialName = haveMiddleName.split('')
+            return `${resultInitialName[0]}${resultInitialName[resultInitialName.length - 1]}`
+        }
         return words.map((word) => word.charAt(0).toUpperCase()).join('').substring(0, 2);
+
+
     };
 
     const renderAvatars = () => {
